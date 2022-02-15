@@ -1,0 +1,45 @@
+﻿{
+  "Methods": [
+    {
+      "Id": "WatchMovie",
+      "Description": "Bought popcorn and sat down to watch a movie",
+      "ServiceId": "DiamondArm",
+      "Url": "v1/watch?watcherId={0}",
+      "HttpMethod": "Post",
+      "Parameters": [
+        {
+          "Name": "WatcherId",
+          "Required": true,
+          "Destination": "Url",
+          "UrlPosition": 0
+        },
+        {
+          "Name": "StreamingService",
+          "Required": false,
+          "Destination": "Body",
+          "UnnamedBody": false
+        }
+      ],
+      "AdditionalHeaders": {},
+      "TransitHeaders": [],
+      "AdditionalCookies": {},
+      "TransitCookies": []
+    },
+    {
+      "Id": "GetMovieRecommendation",
+      "Description": "Get recommendation",
+      "ServiceId": "OperationЫ",
+      "Url": "v1/recommendation/{0}",
+      "HttpMethod": "Get",
+      "Parameters": [
+        {
+          "Name": "movie_id",
+          "Required": true,
+          "Destination": "Url",
+          "UrlPosition": 0,
+          "SourceMethod": "WatchMovie"
+        }
+      ]
+    }
+  ]
+}

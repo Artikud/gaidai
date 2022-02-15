@@ -1,0 +1,33 @@
+﻿{
+  "Services": [
+    {
+      "Id": "DiamondArm",
+      "Description": "slipped, fell, woke up - plaster",
+      "Path": "http://diamond-arm:1968/",
+      "AdditionalHeaders": {
+        "Main-Male-Role": "Nikulin",
+        "Supporting-Male-Role": "Mironov"
+      },
+      "TransitHeaders": [
+        {
+          "Name": "Origin-country",
+          "Required": true
+        },
+        {
+          "Name": "Operator-name",
+          "Required": false
+        }
+      ],
+      "AdditionalCookies": {
+        "Main-Female-Role": "Grebeshkova",
+        "Supporting-Female-Role": "Mordyukova"
+      },
+      "TransitCookies": [
+        {
+          "Name": "Сomposer-name",
+          "Required": false
+        }
+      ]
+    }
+  ]
+}

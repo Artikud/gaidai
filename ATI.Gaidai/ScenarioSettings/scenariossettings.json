@@ -1,0 +1,25 @@
+﻿{
+  "Scenarios": [
+    {
+      "Id": "WatchMovieAndGetRecommendation",
+      "Description": "Watch the movie and get recommendation",
+      "Methods": [
+        "WatchMovie",
+        "GetMovieRecommendation"
+      ],
+      "IsDependent": true,
+      "IsForgettable": false,
+      "IsCommonSuccessful": true,
+      "IsRewritableResponse": false,
+      "ResponseMethods": [
+        "WatchMovie",
+        "GetMovieRecommendation"
+      ],
+      "ResponseFieldTransformation": {
+        "Result": "transformed_result",
+        "watch_result.field_1": "allResults.transformed_field_1",
+        "recommendationResult.field_2": "results.fields.one_more_level.field_666"
+      }
+    }
+  ]
+}
